@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="aitmyhelloapp.examples.android.ait.hu.medicinereminderdemo" >
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.orm.SugarApp"
+        android:allowBackup="true"
+        android:icon="@drawable/medicine_bottle"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon" >
+        tools:replace="android:icon"
+        <meta-data
+            android:name="DATABASE"
+            android:value="sugar_example.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="3" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="aitmyhelloapp.examples.android.ait.hu.medicinereminderdemo.data" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SetTimeActivity"
+            android:label="@string/title_activity_set_time" >
+        </activity>
+        <activity
+            android:name=".ShowHistoryActivity"
+            android:label="@string/title_activity_show_history" >
+        </activity>
+        <activity
+            android:name=".SetPhoneNumberActivity"
+            android:label="@string/title_activity_set_phone_number" >
+        </activity>
+        <activity
+            android:name=".DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <service
+            android:name=".AlarmService"
+            android:enabled="true" />
+
+        <receiver android:name=".TimeReceiver" >
+        </receiver>
+
+        <service
+            android:name=".SecondAlarmService"
+            android:enabled="true" >
+        </service>
+
+        <receiver
+            android:name=".SecondReceiver"
+            android:enabled="true" >
+        </receiver>
+
+        <activity
+            android:name=".ConfirmationActivity"
+            android:label="@string/title_activity_confirmation"
+            android:theme="@android:style/Theme.Dialog">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MedicineReminderDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_set_time">SetTimeActivity</string>
+    <string name="setTime">Time Set is:</string>
+    <string name="key_value">KEY_PLACE</string>
+    <string name="title_activity_show_history">ShowHistoryActivity</string>
+    <string name="title_activity_set_phone_number">SetPhoneNumberActivity</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+    <string name="title_activity_confirmation">ConfirmationActivity</string>
+
+</resources>
